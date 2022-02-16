@@ -1,3 +1,10 @@
+require'plugins'
+require'ayu_setting'
+require'ddc_vim_setting'
+require'wilder_setting'
+
+vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
+
 local opt = vim.opt
 
 -- マウス有効化
@@ -13,15 +20,15 @@ opt.clipboard:append({unnamedplus = true})
 
 opt.number = true
 opt.list = true
-opt.listchars = 'tab:>-', 'trail:*', 'nbsp:+'
+opt.listchars = {tab = '>-', trail = '*', nbsp = '+'}
 opt.smartindent = true
 opt.visualbell = true
 
 opt.showmatch = true
 
 opt.expandtab = true
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
 
 opt.ignorecase = true
 opt.smartcase = true
@@ -31,6 +38,10 @@ opt.whichwrap = 'b', 's', 'h', 'l', '<', '>', '[', ']'
 opt.backspace = 'start', 'eol', 'indent'
 -- Windows環境なのでdosが最初
 opt.fileformats = 'dos', 'unix', 'mac'
+
+--文字コード
+opt.encoding = 'utf-8'
+opt.fileencodings = 'utf-8', 'cp932'
 
 opt.helplang = 'ja', 'en'
 
