@@ -1,7 +1,9 @@
 require'plugins'
-require'ayu_setting'
+require'skkeleton_setting'
 require'ddc_vim_setting'
-require'wilder_setting'
+--require'wilder_setting'
+require'emmet_setting'
+require'ayu_setting'
 
 vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
 
@@ -34,7 +36,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.wrapscan = true
 
-opt.whichwrap = 'b', 's', 'h', 'l', '<', '>', '[', ']'
+opt.whichwrap = 'b,s,h,l,<,>,[,]'
 opt.backspace = 'start', 'eol', 'indent'
 -- Windows環境なのでdosが最初
 opt.fileformats = 'dos', 'unix', 'mac'
