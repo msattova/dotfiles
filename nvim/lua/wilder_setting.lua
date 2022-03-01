@@ -1,7 +1,7 @@
 
 vim.cmd[[
   call wilder#setup({
-    \ 'modes': [':', '/', '?'],
+    \ 'modes': [':', '/'],
     \ 'next_key': '<Tab>',
     \ 'previous_key': '<S-Tab>',
     \ 'accept_key': '<Down>',
