@@ -14,6 +14,9 @@ return require('packer').startup(function()
   -- colortheme
   use 'Shatur/neovim-ayu'
 
+  -- emmet
+  use 'mattn/emmet-vim'
+
   -- lualine
   use {
     'nvim-lualine/lualine.nvim',
@@ -24,6 +27,7 @@ return require('packer').startup(function()
   use 'vim-denops/denops.vim'
   -- ポップアップウインドウ表示
   use 'Shougo/pum.vim'
+  -- use 'gelguy/wilder.nvim'
   -- ddc.vim
   use 'Shougo/ddc.vim'
   -- ddc設定ファイル
@@ -34,8 +38,11 @@ return require('packer').startup(function()
   use 'Shougo/ddc-converter_remove_overlap'
   use 'Shougo/ddc-cmdline'
   use 'Shougo/ddc-cmdline-history'
+  use 'Shougo/ddc-nvim-lsp'
 
-  use 'gelguy/wilder.nvim'
+  -- skk
+  use 'vim-skk/skkeleton'
+  use 'delphinus/skkeleton_indicator.nvim'
 
   -- Lazy loading:
   -- Load on specific commands
