@@ -27,6 +27,7 @@
     ;; initialize leaf-keywords.el
     (leaf-keywords-init)))
 
+
 (leaf leaf
   :config
   (leaf leaf-convert :ensure t)
@@ -198,20 +199,21 @@
   :setq ((default-frame-alist quote
            ((font . "Firge35Nerd-11")))))
 
-(leaf theme-setting
+(leaf doom-themes
   :require doom-themes
-  :setq ((doom-themes-enable-bold . t)
-         (doom-themes-enable-italic . t))
   :config
   (load-theme 'doom-nord t))
 
 (eval-and-compile (require 'skk))
 
 (leaf ddskk
-  :ensure t
+  :ensure ddskk
+  :require skk
   :bind
   ("C-x C-j" . skk-mode)
-  ("C-x j"   . skk-mode))
+  ("C-x j"   . skk-mode)
+  :custom
+  (skk-auto-insert-paren . t))
 
 (setq skk-show-annotation nil)
 (setq skk-server-portnum 1178)
@@ -237,4 +239,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
